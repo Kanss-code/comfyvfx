@@ -503,9 +503,6 @@ app.registerExtension({
     name: "ComfyVFX.PoseEditor",
     
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
-        // DEBUG: Log all node registrations to verify this file is loaded
-        console.log("[PoseEditor DEBUG] beforeRegisterNodeDef called for:", nodeData.name);
-        
         if (nodeData.name !== "ComfyVFX_PoseEditor") return;
         
         console.log("[PoseEditor DEBUG] Setting up ComfyVFX_PoseEditor node");
